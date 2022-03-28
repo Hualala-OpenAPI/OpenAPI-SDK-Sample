@@ -8,18 +8,25 @@ import PaymentController from "../../controllers/PaymentController";
 import "./css/PaymentDetail.less";
 import {showToast} from "../../Utils";
 import {getTableStatus} from "../../store/actions/Table";
+import EnumController from "../../controllers/EnumController";
 
 const {RadioItem} = Radio;
 const PaymentDetail = props => {
-  const {history, paymentAmount, showCancel = true, tableInfo, onFinished} = props;
+  const {moduleConfig, paymentAmount, showCancel = true, tableInfo, onFinished} = props;
+  const {paymentType} = moduleConfig;
+  const {AFTER} = EnumController.PAYMENT_TYPE();
   const [paymentItem, updatePaymentItem] = useState(null);
   const [canPay, updateCanPay] = useState(false);
 
   useEffect(() => {
-    showToast({content: "查询桌台信息..", duration: 0});
-    props.getTableStatus(() => {
+    if (paymentType === AFTER) {
+      showToast({content: "查询桌台信息..", duration: 0});
+      props.getTableStatus(() => {
+        getPaymentList();
+      });
+    } else {
       getPaymentList();
-    });
+    }
   }, []);
 
   const getPaymentList = () => {
@@ -62,6 +69,7 @@ const PaymentDetail = props => {
 const mapStateToProps = state => {
   const {tableInfo, paymentAmount} = state.table.toJS();
   return {
+    moduleConfig: state.common.get("moduleConfig").toJS(),
     tableInfo,
     paymentAmount
   };

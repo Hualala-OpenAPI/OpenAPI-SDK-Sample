@@ -62,7 +62,7 @@
             "last 1 safari version"
         ]
     },
-    "proxy": "http://192.168.13.230:8097",
+    "proxy": "http://xxx",
     "licenses": [
         {
             "type": "MIT",

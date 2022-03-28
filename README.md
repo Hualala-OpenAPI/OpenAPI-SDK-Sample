@@ -3,12 +3,13 @@
     该分支是OpenAPI-SDK堂食场景的Demo演示,包含桌台查询、获取菜品列表、估清、加购物车、下单、先付、后付、加菜、退菜、退款等.
 
 ## 启动前需要配置的内容
-打开根目录.env.development文件
-1. REACT_APP_API_URL #接口前缀(axios中的baseUrl)
-2. REACT_APP_GROUP_ID #所属集团ID
-3. REACT_APP_SHOP_ID #所属门店ID
-4. REACT_APP_TABLE_NAME #门店中某一个桌台的名称
-5. 配置完成后重启服务
+1. 打开package.json
+2. 修改package.json中的"proxy"字段为后端的服务地址
+3. 打开根目录.env.development文件
+5. REACT_APP_GROUP_ID #所属集团ID
+6. REACT_APP_SHOP_ID #所属门店ID
+7. REACT_APP_TABLE_NAME #门店中某一个桌台的名称
+8. 配置完成后重启服务
 
 ## 项目结构
 

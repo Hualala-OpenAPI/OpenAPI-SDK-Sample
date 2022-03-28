@@ -115,11 +115,11 @@ const OrderCreate = props => {
         visible={paymentVisible}
         destroyOnClose
         position="top"
+        getContainer={document.getElementById("mainContainer")}
         bodyStyle={{
           background: "none",
           height: "100%"
         }}
-        getContainer={document.getElementById("mainContainer")}
         onMaskClick={() => updatePaymentVisible(false)}
       >
         {paymentVisible ? <PaymentDetail showCancel={paymentType !== NOW} onFinished={paymentFinished} /> : null}
