@@ -1,9 +1,46 @@
 ## 项目简述
 
-此项目是基于哗啦啦OpenAPI-SDK编写的各场景Demo演示,根据分支切换对应场景,关于各场景的详情介绍请查看对应分支的README
+    该分支是OpenAPI-SDK堂食场景的Demo演示,包含桌台查询、获取菜品列表、估清、加购物车、下单、先付、后付、加菜、退菜、退款等.
 
-## 场景分支
+## 启动前需要配置的内容
+打开根目录.env.development文件
+1. REACT_APP_API_URL #接口前缀(axios中的baseUrl)
+2. REACT_APP_GROUP_ID #所属集团ID
+3. REACT_APP_SHOP_ID #所属门店ID
+4. REACT_APP_TABLE_NAME #门店中某一个桌台的名称
+5. 配置完成后重启服务
 
-- shop分支:堂食
+## 项目结构
 
-## 其他场景正在开发中
+    - assets 资源相关
+    - components 通用组件以及布局组件
+    - containers 容器组件和UI组件
+    - controllers 根据功能划分的类,里边存放对应功能的部分处理方法,逻辑处理或数据处理
+    - routes 路由
+    - services 接口
+    - store redux
+    - views 页面文件
+    - Config.js 环境变量配置
+    - Filter.js 过滤方法
+    - index.jsx 入口文件
+    - Utils.js 工具函数集
+
+
+## 运行
+
+```
+    #安装依赖
+    npm install 
+    # or 
+    yarn
+    
+    #本地运行
+    npm run start 
+    # or 
+    yarn start 
+    
+    #打包
+    npm run build 
+    # or 
+    yarn build 
+```
