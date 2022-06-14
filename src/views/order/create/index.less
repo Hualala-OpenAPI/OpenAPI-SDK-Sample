@@ -1,13 +1,21 @@
 .order-create {
   position: relative;
-  padding-bottom: 110px;
+  padding-bottom: 70px;
   min-height: 100%;
   box-sizing: border-box;
   background: #fff;
 
+  .shop-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    border-bottom: 1px solid lightgrey;
+  }
+
   .goods-content {
-    margin-top: 20px;
-    padding: 0 20px;
+    padding:10px 20px;
+    overflow-y: auto;
   }
 
   .bottom-info {
@@ -16,11 +24,10 @@
     bottom: 0;
     z-index: 10;
     width: 100%;
-    padding: 20px 0;
+    padding: 20px;
     background: #fff;
     box-shadow: 0 2px 2px 5px rgba(0, 0, 0, .1);
     display: flex;
-    align-items: center;
-    justify-content: space-around;
+    justify-content: flex-end;
   }
 }
