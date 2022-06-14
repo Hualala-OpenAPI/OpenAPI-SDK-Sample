@@ -1,0 +1,83 @@
+.shop-card-list-item {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 40px;
+  padding: 10px 0;
+  border-bottom: 1px solid lightgray;
+  box-sizing: border-box;
+
+
+  &:last-child {
+    border-bottom-color: transparent;
+  }
+
+  .row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .item {
+    .remark {
+      font-size: 14px;
+      margin: 4px 0 0 10px;
+      color: gray;
+    }
+  }
+
+  .sub-item {
+    margin: 4px 0 0 10px;
+    font-size: 14px;
+  }
+
+  .left-container {
+    text-align: left;
+    flex: 1;
+    margin-right: 20px;
+
+    .name {
+      flex: 1;
+      color: #333;
+      margin-right: 10px;
+    }
+
+    .right-row {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+
+      .count {
+        min-width: 70px;
+        text-align: right;
+      }
+
+      .price {
+        text-align: right;
+        min-width: 50px;
+        margin-left: 4px;
+      }
+    }
+  }
+
+  .right-operation {
+    display: flex;
+    align-items: center;
+
+    .count {
+      min-width: 40px;
+      margin: 0 10px;
+      text-align: center;
+    }
+
+    .btn {
+      font-size: 14px;
+      width: 30px;
+      height: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}

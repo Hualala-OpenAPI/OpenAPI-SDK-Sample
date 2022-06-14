@@ -1,0 +1,68 @@
+.shop-picker {
+  position: fixed;
+  left: 0;
+  bottom: 52px;
+  width: 100%;
+  background: #fff;
+  color: #333;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  padding: 20px 20px 0;
+  box-sizing: border-box;
+
+  .content-container {
+    height: 460px;
+    overflow-y: auto;
+  }
+
+  .row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 14px;
+  }
+
+  .name, .price {
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  .price {
+    color: red;
+  }
+
+  .sub-title {
+    font-size: 14px;
+    text-align: left;
+
+    .tips {
+      font-size: 12px;
+      color: gray;
+    }
+  }
+
+  .operation {
+    .row();
+    margin-bottom: 0;
+    height: 100%;
+
+    .count {
+      background: #efefef;
+      padding: 0 10px;
+      margin: 0 10px;
+    }
+  }
+
+  .tag-container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 10px 0;
+
+  }
+
+  .btn {
+    width: 80%;
+    margin: 10px auto 10px;
+  }
+}

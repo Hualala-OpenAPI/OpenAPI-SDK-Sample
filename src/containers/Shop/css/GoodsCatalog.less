@@ -1,0 +1,26 @@
+.goods-catalog {
+  width: 120px;
+  height: 100%;
+
+  &-container {
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+  }
+
+  &-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    border-bottom: 1px solid lightgrey;
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+
+  .catalog-item-active {
+    background: lightgrey;
+  }
+}
