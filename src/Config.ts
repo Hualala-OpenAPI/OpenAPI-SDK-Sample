@@ -4,9 +4,6 @@ export default {
     name: process.env.REACT_APP_NAME,
     url: process.env.REACT_APP_URL
   },
-  res: {
-    url: process.env.REACT_APP_RES_URL
-  },
   api: {
     url: process.env.REACT_APP_API_URL
   },
